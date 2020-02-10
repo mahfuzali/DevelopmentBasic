@@ -1,0 +1,45 @@
+﻿https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/polymorphism
+
+Polymorphism is often referred to as the third pillar of object-oriented programming, after encapsulation and inheritance. 
+Polymorphism is a Greek word that means "many-shaped" and it has two distinct aspects:
+
+- At run time, objects of a derived class may be treated as objects of a base class in places such as method parameters and collections or arrays. 
+  When this occurs, the object's declared type is no longer identical to its run-time type.
+
+- Base classes may define and implement virtual methods, and derived classes can override them, which means they provide their own definition and implementation. 
+At run-time, when client code calls the method, the CLR looks up the run-time type of the object, and invokes that override of the virtual method. Thus in your 
+source code you can call a method on a base class, and cause a derived class's version of the method to be executed.
+
+
+Polymorphism Overview
+
+When a derived class inherits from a base class, it gains all the methods, fields, properties and events of the base class. The designer of the derived class can choose whether to
+- override virtual members in the base class,
+- inherit the closest base class method without overriding it
+- define new non-virtual implementation of those members that hide the base class implementations
+
+A derived class can override a base class member only if the base class member is declared as virtual or abstract. The derived member must use the override keyword to 
+explicitly indicate that the method is intended to participate in virtual invocation.
+
+When a derived class inherits from a base class, it gains all the methods, fields, properties and events of the base class. The designer of the derived class can choose whether to
+
+Fields cannot be virtual; only methods, properties, events and indexers can be virtual. When a derived class overrides a virtual member, that member is called even when an 
+instance of that class is being accessed as an instance of the base class.
+
+Virtual methods and properties enable derived classes to extend a base class without needing to use the base class implementation of a method.
+
+Hiding Base Class Members with New Members
+- If you want your derived member to have the same name as a member in a base class, but you do not want it to participate in virtual invocation, you can use the new keyword. 
+The new keyword is put before the return type of a class member that is being replaced. 
+- Hidden base class members can still be accessed from client code by casting the instance of the derived class to an instance of the base class. 
+
+
+Preventing Derived Classes from Overriding Virtual Members
+- Virtual members remain virtual indefinitely, regardless of how many classes have been declared between the virtual member and the class that originally declared it. If class A 
+declares a virtual member, and class B derives from A, and class C derives from B, class C inherits the virtual member, and has the option to override it, regardless of whether class 
+B declared an override for that member. 
+- A derived class can stop virtual inheritance by declaring an override as sealed. This requires putting the sealed keyword before the override keyword in the class member declaration.
+
+
+Accessing Base Class Virtual Members from Derived Classes
+- A derived class that has replaced or overridden a method or property can still access the method or property on the base class using the base keyword. 

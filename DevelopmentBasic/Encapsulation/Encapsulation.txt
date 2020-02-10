@@ -1,0 +1,28 @@
+﻿Encapsulation means that a group of related properties, methods, and other members are treated as a single unit or object.
+
+
+https://www.tutlane.com/tutorial/csharp/csharp-encapsulation
+
+In C#, Encapsulation is a process of binding the data members and member functions into a single unit. In c#, class is the real time 
+example for encapsulation because it will combine a various type of data members and member functions into a single unit.
+
+Generally, in c# the encapsulation is used to prevent an alteration of code (data) accidentally from the outside of functions. In c#, 
+by defining the class fields with properties we can protect the data from accidental corruption.
+
+
+https://www.codeproject.com/Articles/1069111/Csharp-Lectures-Lecture-OOP-basics-Abstraction
+
+Encapsulation is a kind of continuation of abstraction. Once we decided about the model  of our solution and choose what should be implemented 
+and how, we should hide implementation details from end user. Encapsulation hides implementation details and treats them as a secret. Developer 
+defines what should be open in every specific class and makes this data available for user of the class all other details are hidden. Encapsulation 
+is achieved by hiding internal structure of the object as well as implementation of its methods. All that is public is an interface to work with the 
+specific object that is controlled by developer as its creator. As Liskov stated: “For abstraction to work, implementations must be encapsulated”. 
+Encapsulation helps to add rules to abstraction and clarifies it to end user.
+
+
+Talking in terms of programming language such as C# we can define following recommendation for encapsulation:
+- All data members should be private. You should think twice before declaring some data member as non private
+- If you have some methods in class that are used only internally and you don't expect them to be used by class user, you should hide them and make private
+- To access data members directly you should use methods or properties.
+- Define your properties with the language of your model and don't connect them to names of member variables that they cover. In case if member variables have names that don't fit your model, of course.
+- If you write some simple getter\setter pair,  try to think why it happens. Good designs, with some exceptions, don't have flow for access some variables inside object. Everything should be wrapped to functions.

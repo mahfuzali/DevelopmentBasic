@@ -1,0 +1,18 @@
+﻿https://www.tutlane.com/tutorial/csharp/csharp-abstraction
+Abstraction is a principle of object oriented programming language (OOP) and it is used to hide the implementation details and display only essential features of the object.
+
+In Abstraction, by using access modifiers we can hide the required details of object and expose only necessary methods and properties through the reference of object.
+
+https://www.codeproject.com/Articles/1069111/Csharp-Lectures-Lecture-OOP-basics-Abstraction
+When you build your software from classes you encapsulate real world objects to software abstractions. The process of abstraction is the process to build a software model that 
+presents solution for some task's in real world. Your abstractions are mapped to real object or processes and they present these objects in your software solution. Grady Booch 
+defined abstraction as: 
+	"An abstraction denotes the essential characteristics of an object that distinguish it from all other kinds of objects and thus provide crisply defined conceptual boundaries, 
+	relative to the perspective of the viewer."  
+Abstraction is actually part of Object Oriented Design (OOD) - the process when you build your model using object oriented technologies.
+
+Abstraction	
+It is used to hide unwanted data and show only required properties and methods.	
+
+Encapsulation
+It is used to bind data members and member functions into single unit to prevent outsiders to access it directly.
